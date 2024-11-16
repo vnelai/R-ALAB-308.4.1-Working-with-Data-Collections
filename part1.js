@@ -15,7 +15,7 @@
 // }
 
 
-// let csvData1 = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26"
+// let csvData1 = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 // csvFormat(csvData1);
 
 
@@ -23,7 +23,7 @@
 function cvsFormat(cvsData) {
     const rows = cvsData.split("\n"); //Split CSV data into rows
     const headers = rows[0].split(","); //Gather headers from first row into one array
-    const arrayData = []; 
+    const arrayData = []; //Initialize empty array in which object will be added
 
     for (let i = 1; i <rows.length; i++) {
         const cells = rows[i].split(","); //Split rows into cells (excluding header row)
@@ -37,5 +37,5 @@ function cvsFormat(cvsData) {
 }
 
 // Test code
-let csvData3 = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26"
+let csvData3 = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 cvsFormat(csvData3);
